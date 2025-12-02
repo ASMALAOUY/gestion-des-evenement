@@ -120,8 +120,7 @@ Le projet est développé avec les technologies et outils suivants :
 ![image alt](https://raw.githubusercontent.com/ASMALAOUY/gestion-des-evenement/77397f2c32fac67f58d4efa30d24958bcb9a4450/image.png)
 
 ## demo
-
-[![Regarder la vidéo](https://drive.google.com/file/d/1uUHUhSS-2_TJW0z9hbnGFWasAz7vq_yh/view?usp=drive_link)
+https://drive.google.com/file/d/1uUHUhSS-2_TJW0z9hbnGFWasAz7vq_yh/view?usp=drive_link
 
 
 
