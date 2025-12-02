@@ -47,9 +47,7 @@ Cette solution simple, intuitive et professionnelle facilite l’organisation d�
 
 ### 5 Calcul automatique du taux de remplissage
 Formule :  
-\[
-\text{Taux} = \frac{\text{Nombre d'inscrits}}{\text{Capacité}} \times 100
-\]
+Taux de remplissage=(capacite/nombre d’inscrits)​×100
 
 ### 6 Statistiques & Graphiques
 - Diagramme en barres : **Participants par événement**  
