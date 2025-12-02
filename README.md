@@ -118,3 +118,15 @@ Le projet est développé avec les technologies et outils suivants :
 ## Architecture du projet :
 
 ![image alt](https://raw.githubusercontent.com/ASMALAOUY/gestion-des-evenement/77397f2c32fac67f58d4efa30d24958bcb9a4450/image.png)
+
+## demo
+
+[![Regarder la vidéo](https://drive.google.com/file/d/1uUHUhSS-2_TJW0z9hbnGFWasAz7vq_yh/view?usp=drive_link)
+
+
+
+## Auteur
+Nom : ASMA LAOUY
+Cours : Programmation java
+Date : Decembre 2025
+Encadré par : Pr. Mohamed LACHGAR
