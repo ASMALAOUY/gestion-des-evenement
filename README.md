@@ -97,15 +97,26 @@ CREATE TABLE Inscription (
     FOREIGN KEY(id_participant) REFERENCES Participant(id_participant)
 );
 ```
-## Technologies utilisées
--Langage : Java
--Framework d'interface graphique : Java Swing
--API : JavaMail
--Base de données : MySQL
--Bibliothèque graphique : JFreeChart
--Outils de développement :
-  .IDE : NetBeans
-  .Outil de gestion de base de données : phpMyAdmin
-  .Accès aux données : JDBC
+## Technologies et outils utilisés
 
-  ## Architecture du projet :
+Le projet est développé avec les technologies et outils suivants :
+
+### Langage de programmation
+- **Java** : Langage principal pour la logique applicative et le développement de l'interface.
+
+### Framework et bibliothèques
+- **Java Swing** : Pour la création de l'interface graphique (GUI).
+- **JFreeChart** : Pour la génération de graphiques et la visualisation de données.
+- **JavaMail API** : Pour l'envoi et la gestion des e-mails depuis l'application.
+
+### Base de données
+- **MySQL** : Base de données relationnelle pour stocker les données de l'application.
+- **JDBC** : Pour la connexion et l'accès aux données depuis Java.
+- **phpMyAdmin** : Outil de gestion de base de données MySQL.
+
+### Environnement et outils de développement
+- **NetBeans IDE** : Environnement de développement intégré pour le codage, le débogage et la compilation.
+
+## Architecture du projet :
+
+![image alt](https://raw.githubusercontent.com/ASMALAOUY/gestion-des-evenement/77397f2c32fac67f58d4efa30d24958bcb9a4450/image.png)
