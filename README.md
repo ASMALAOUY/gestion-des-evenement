@@ -98,12 +98,14 @@ CREATE TABLE Inscription (
 );
 ```
 ## Technologies utilisées
-Langage : Java
-Framework d'interface graphique : Java Swing
-API : JavaMail
-Base de données : MySQL
-Bibliothèque graphique : JFreeChart
-Outils de développement :
-IDE : NetBeans
-Outil de gestion de base de données : phpMyAdmin
-Accès aux données : JDBC
+-Langage : Java
+-Framework d'interface graphique : Java Swing
+-API : JavaMail
+-Base de données : MySQL
+-Bibliothèque graphique : JFreeChart
+-Outils de développement :
+  .IDE : NetBeans
+  .Outil de gestion de base de données : phpMyAdmin
+  .Accès aux données : JDBC
+
+  ## Architecture du projet :
