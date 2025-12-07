@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/fab21151-1215-40d2-b2f2-80d2faf63aa1
 <p align="center" style="font-size:30px; font-weight:bold;">
  Gestion des Événements — Application Java Swing
 </p>
@@ -126,7 +128,7 @@ Le projet est développé avec les technologies et outils suivants :
 https://drive.google.com/file/d/1uUHUhSS-2_TJW0z9hbnGFWasAz7vq_yh/view?usp=drive_link
 
 
-
+Uploading bandicam 2025-12-07 17-18-43-472 (1).mov…
 
 
 
