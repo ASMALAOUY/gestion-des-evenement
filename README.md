@@ -125,8 +125,6 @@ Le projet est développé avec les technologies et outils suivants :
 
 
 
-https://drive.google.com/file/d/1uUHUhSS-2_TJW0z9hbnGFWasAz7vq_yh/view?usp=drive_link
-
 https://github.com/user-attachments/assets/fab21151-1215-40d2-b2f2-80d2faf63aa1
 
 
