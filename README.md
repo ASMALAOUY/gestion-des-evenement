@@ -60,7 +60,7 @@ Taux de remplissage=(capacite/nombre d’inscrits)​×100
 ##  Structure de la base de données (MySQL)
 
 ###    MCD**
-![image alt](https://github.com/ASMALAOUY/gestion-des-evenement/blob/main/Capture%20d%E2%80%99%C3%A9cran%202025-12-02%20173223.jpg?raw=true)
+![image alt](https://raw.githubusercontent.com/ASMALAOUY/gestion-des-evenement/fb1ab33714412b3254835394d81eefb39c5ce47d/image.png)
 
 
 ## Codes SQL
