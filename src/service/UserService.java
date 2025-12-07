@@ -92,13 +92,14 @@ public class UserService {
         }
     }
 
-     /**
+    /**
      * Réinitialise le mot de passe et envoie un email (AVEC THREAD)
      */
     public void resetPassword(String emailTo) {
 
         // 1. Générer un nouveau mot de passe
-        final String newPassword = "Art" + (int)(Math.random() * 9000 + 1000);
+        final String newPassword = "Asma@#"
+                + "" + (int)(Math.random() * 9000 + 1000);
 
         // 2. Mettre à jour dans la base (sera HACHÉ avec MD5)
         boolean updated = updatePasswordByEmail(emailTo, newPassword);
@@ -190,7 +191,7 @@ public class UserService {
         });
         
         emailThread.setName("EmailSender-Thread");
-        emailThread.start(); // Appelle la méthode run()
+        emailThread.start();
         
         // Message immédiat pour l'utilisateur
         JOptionPane.showMessageDialog(null,
@@ -198,5 +199,54 @@ public class UserService {
                 "Information",
                 JOptionPane.INFORMATION_MESSAGE
         );
+    }
+    
+    /**
+     * Enregistre un nouvel utilisateur
+     */
+    public boolean registerUser(String email, String password, String nom, String prenom) {
+        try {
+            System.out.println("=== Début registerUser ===");
+            System.out.println("Email: " + email);
+            System.out.println("Nom: " + nom);
+            System.out.println("Prénom: " + prenom);
+            
+            // Vérifier si l'utilisateur existe déjà
+            if (checkUserExists(email)) {
+                System.out.println("Email existe déjà : " + email);
+                return false;
+            }
+            
+            String hashedPassword = hashPassword(password);
+            System.out.println("Mot de passe hashé : " + hashedPassword);
+            
+            String sql = "INSERT INTO utilisateur (email, password, nom, prenom) VALUES (?, ?, ?, ?)";
+            System.out.println("SQL : " + sql);
+            
+            PreparedStatement ps = Connexion.getConnection().prepareStatement(sql);
+            
+            ps.setString(1, email);
+            ps.setString(2, hashedPassword);
+            ps.setString(3, nom);
+            ps.setString(4, prenom);
+            
+            int result = ps.executeUpdate();
+            System.out.println("Résultat : " + result + " ligne(s) insérée(s)");
+            
+            if (result > 0) {
+                System.out.println("=== Inscription réussie ===");
+                return true;
+            } else {
+                System.out.println("=== Aucune ligne insérée ===");
+                return false;
+            }
+            
+        } catch (Exception e) {
+            System.out.println("=== ERREUR registerUser ===");
+            System.out.println("Message : " + e.getMessage());
+            System.out.println("Type : " + e.getClass().getName());
+            e.printStackTrace();
+            return false;
+        }
     }
 }

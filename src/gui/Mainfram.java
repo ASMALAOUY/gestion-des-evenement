@@ -7,6 +7,7 @@ package gui;
 
 import connexion.Connexion;
 import java.awt.BorderLayout; 
+import java.awt.Dimension;
 import java.awt.PopupMenu;
 import javax.swing.BoxLayout;
 import javax.swing.JDesktopPane;
@@ -24,9 +25,13 @@ public class Mainfram extends javax.swing.JFrame {
      */
     public Mainfram() {
         initComponents();
+        deconnexion = new javax.swing.JMenu();
         
-        
-      
+        desktopPane.setOpaque(true);
+        desktopPane.setBackground(new java.awt.Color(255, 255, 255));
+      desktopPane.setSize(this.getWidth(), this.getHeight());
+      desktopPane.setPreferredSize(new Dimension(this.getWidth(), this.getHeight()));
+
 
     }
 
@@ -40,6 +45,9 @@ public class Mainfram extends javax.swing.JFrame {
     private void initComponents() {
 
         desktopPane = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         menuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
         evenement = new javax.swing.JMenuItem();
@@ -49,15 +57,73 @@ public class Mainfram extends javax.swing.JFrame {
         cutMenuItem = new javax.swing.JMenuItem();
         helpMenu = new javax.swing.JMenu();
         graphe = new javax.swing.JMenuItem();
+        deconnexion = new javax.swing.JMenu();
+        Déconnexion = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(1650, 1350));
 
-        fileMenu.setBackground(new java.awt.Color(255, 255, 255));
+        desktopPane.setBackground(new java.awt.Color(255, 255, 255));
+        desktopPane.setPreferredSize(new java.awt.Dimension(1263, 747));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 0, 204));
+        jLabel1.setText("GESTION DES ÉVÉNEMENTS");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(102, 0, 153));
+        jLabel3.setText("© 2025 - Application de Gestion des Événements ");
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\X1 YOGA\\Desktop\\module java\\applic\\JavaApplication3\\src\\image\\bg.jpg")); // NOI18N
+
+        javax.swing.GroupLayout desktopPaneLayout = new javax.swing.GroupLayout(desktopPane);
+        desktopPane.setLayout(desktopPaneLayout);
+        desktopPaneLayout.setHorizontalGroup(
+            desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desktopPaneLayout.createSequentialGroup()
+                .addGroup(desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(desktopPaneLayout.createSequentialGroup()
+                        .addGap(351, 351, 351)
+                        .addComponent(jLabel3))
+                    .addGroup(desktopPaneLayout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addComponent(jLabel1))
+                    .addGroup(desktopPaneLayout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 790, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+        desktopPaneLayout.setVerticalGroup(
+            desktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(desktopPaneLayout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel3)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+        desktopPane.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desktopPane.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        desktopPane.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        menuBar.setBackground(new java.awt.Color(255, 255, 255));
+        menuBar.setPreferredSize(new java.awt.Dimension(153, 60));
+
+        fileMenu.setBackground(new java.awt.Color(0, 0, 0));
         fileMenu.setForeground(new java.awt.Color(153, 0, 255));
         fileMenu.setMnemonic('f');
-        fileMenu.setText("File");
+        fileMenu.setText("Gestion");
 
+        evenement.setBackground(new java.awt.Color(255, 255, 255));
+        evenement.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        evenement.setForeground(new java.awt.Color(102, 0, 204));
         evenement.setMnemonic('o');
         evenement.setText("Gestion des evenements");
         evenement.addActionListener(new java.awt.event.ActionListener() {
@@ -67,6 +133,9 @@ public class Mainfram extends javax.swing.JFrame {
         });
         fileMenu.add(evenement);
 
+        participant.setBackground(new java.awt.Color(255, 255, 255));
+        participant.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        participant.setForeground(new java.awt.Color(102, 0, 204));
         participant.setMnemonic('s');
         participant.setText("Gestion des participant");
         participant.addActionListener(new java.awt.event.ActionListener() {
@@ -76,6 +145,9 @@ public class Mainfram extends javax.swing.JFrame {
         });
         fileMenu.add(participant);
 
+        insription.setBackground(new java.awt.Color(255, 255, 255));
+        insription.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        insription.setForeground(new java.awt.Color(102, 0, 204));
         insription.setMnemonic('a');
         insription.setText("Gestion des inscription");
         insription.addActionListener(new java.awt.event.ActionListener() {
@@ -87,11 +159,13 @@ public class Mainfram extends javax.swing.JFrame {
 
         menuBar.add(fileMenu);
 
-        editMenu.setBackground(new java.awt.Color(255, 255, 255));
+        editMenu.setBackground(new java.awt.Color(0, 0, 0));
         editMenu.setForeground(new java.awt.Color(153, 0, 255));
         editMenu.setMnemonic('e');
         editMenu.setText("Filtrer");
 
+        cutMenuItem.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        cutMenuItem.setForeground(new java.awt.Color(102, 0, 204));
         cutMenuItem.setMnemonic('t');
         cutMenuItem.setText("Voir Le Filtrage");
         cutMenuItem.addActionListener(new java.awt.event.ActionListener() {
@@ -103,11 +177,13 @@ public class Mainfram extends javax.swing.JFrame {
 
         menuBar.add(editMenu);
 
-        helpMenu.setBackground(new java.awt.Color(255, 255, 255));
+        helpMenu.setBackground(new java.awt.Color(0, 0, 0));
         helpMenu.setForeground(new java.awt.Color(153, 0, 255));
         helpMenu.setMnemonic('h');
         helpMenu.setText("Graphe");
 
+        graphe.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        graphe.setForeground(new java.awt.Color(102, 0, 204));
         graphe.setMnemonic('c');
         graphe.setText("voir les graphe");
         graphe.addActionListener(new java.awt.event.ActionListener() {
@@ -119,90 +195,168 @@ public class Mainfram extends javax.swing.JFrame {
 
         menuBar.add(helpMenu);
 
+        deconnexion.setBackground(new java.awt.Color(0, 0, 0));
+        deconnexion.setForeground(new java.awt.Color(153, 51, 0));
+        deconnexion.setMnemonic('h');
+        deconnexion.setText("Déconnexion");
+        deconnexion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deconnexionActionPerformed(evt);
+            }
+        });
+
+        Déconnexion.setBackground(new java.awt.Color(255, 255, 255));
+        Déconnexion.setForeground(new java.awt.Color(153, 0, 0));
+        Déconnexion.setText("Déconnexion");
+        Déconnexion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DéconnexionActionPerformed(evt);
+            }
+        });
+        deconnexion.add(Déconnexion);
+
+        menuBar.add(deconnexion);
+
         setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1608, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 974, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 1350, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void insriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insriptionActionPerformed
-         InscriptionPanel ins=new InscriptionPanel();
-                  desktopPane.add(ins );
-                  ins.setVisible(true);
-    }//GEN-LAST:event_insriptionActionPerformed
+    private void grapheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grapheActionPerformed
+        GraphPanel gp = new GraphPanel();
+        desktopPane.add(gp);
+        gp.setVisible(true);
 
-    private void evenementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_evenementActionPerformed
-         EvenementPanel pp=new  EvenementPanel ();
-                desktopPane.add(pp);
-                pp.setVisible(true);
-    }//GEN-LAST:event_evenementActionPerformed
+        try {
+            gp.setMaximum(true); // Afficher en plein écran dans le desktopPane
+        } catch (java.beans.PropertyVetoException e) {
+            e.printStackTrace();
+        }
+        }
+
+        /**
+        * @param args the command line arguments
+        */
+        public static void main(String args[]) {
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+
+                    JFrame frame = new JFrame("Connexion");
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    // Dans votre logginPanel, quand vous ouvrez Mainfram :
+
+                    JDesktopPane desktop = new JDesktopPane();
+                    frame.setContentPane(desktop);
+                    frame.setSize(800, 900);
+                    frame.setLocationRelativeTo(null);
+
+                    logginPanel loginInternal = new logginPanel();
+                    desktop.add(loginInternal);
+                    loginInternal.setSize(800, 1500); // taille du formulaire
+                    loginInternal.setVisible(true);
+
+                    frame.setVisible(true);
+                }});
+    }//GEN-LAST:event_grapheActionPerformed
+
+    private void cutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutMenuItemActionPerformed
+        StatistiquesPanel stats = new StatistiquesPanel();
+        desktopPane.add(stats);
+        stats.setVisible(true);
+        try {
+            stats.setMaximum(true);
+        } catch (java.beans.PropertyVetoException e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_cutMenuItemActionPerformed
+
+    private void insriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insriptionActionPerformed
+        InscriptionPanel ins=new InscriptionPanel();
+        desktopPane.add(ins );
+        ins.setVisible(true);
+    }//GEN-LAST:event_insriptionActionPerformed
 
     private void participantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_participantActionPerformed
         ParticipantPanel ps=new ParticipantPanel ();
-                  desktopPane.add(ps );
-                  ps.setVisible(true);
+        desktopPane.add(ps );
+        ps.setVisible(true);
     }//GEN-LAST:event_participantActionPerformed
 
-    private void cutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutMenuItemActionPerformed
-       StatistiquesPanel stats = new StatistiquesPanel();
-    desktopPane.add(stats);
-    stats.setVisible(true);
-    try {
-        stats.setMaximum(true);
-    } catch (java.beans.PropertyVetoException e) {
-        e.printStackTrace();
-    }
-    }//GEN-LAST:event_cutMenuItemActionPerformed
+    private void evenementActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_evenementActionPerformed
+        EvenementPanel pp=new  EvenementPanel ();
+        desktopPane.add(pp);
+        pp.setVisible(true);
+    }//GEN-LAST:event_evenementActionPerformed
 
-    private void grapheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grapheActionPerformed
-          GraphPanel gp = new GraphPanel();
-    desktopPane.add(gp);
-    gp.setVisible(true);
-
-    try {
-        gp.setMaximum(true); // Afficher en plein écran dans le desktopPane
-    } catch (java.beans.PropertyVetoException e) {
-        e.printStackTrace();
-    }
-    }                                     
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-       java.awt.EventQueue.invokeLater(new Runnable() {
-        public void run() {
-         
-        JFrame frame = new JFrame("Connexion");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Dans votre logginPanel, quand vous ouvrez Mainfram :
-  
+    private void deconnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deconnexionActionPerformed
+        int confirm = javax.swing.JOptionPane.showConfirmDialog(
+        this,
+        "Êtes-vous sûr de vouloir vous déconnecter ?",
+        "Déconnexion",
+        javax.swing.JOptionPane.YES_NO_OPTION
+    );
+    
+    if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+        this.dispose();
         
-        JDesktopPane desktop = new JDesktopPane();
+        javax.swing.JFrame frame = new javax.swing.JFrame("Connexion");
+        frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+        
+        javax.swing.JDesktopPane desktop = new javax.swing.JDesktopPane();
         frame.setContentPane(desktop);
-        frame.setSize(1700, 1500);
-        frame.setLocationRelativeTo(null); 
-
-       logginPanel loginInternal = new logginPanel();
-       desktop.add(loginInternal);
-       loginInternal.setSize(800, 1500); // taille du formulaire
+        frame.setSize(800, 900);
+        frame.setLocationRelativeTo(null);
+        
+        logginPanel loginInternal = new logginPanel();
+        desktop.add(loginInternal);
+        loginInternal.setSize(800, 1500);
         loginInternal.setVisible(true);
-
+        
         frame.setVisible(true);
-    }});
-    }//GEN-LAST:event_grapheActionPerformed
+    }
+    }//GEN-LAST:event_deconnexionActionPerformed
+
+    private void DéconnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DéconnexionActionPerformed
+        int confirm = javax.swing.JOptionPane.showConfirmDialog(
+        this,
+        "Êtes-vous sûr de vouloir vous déconnecter ?",
+        "Déconnexion",
+        javax.swing.JOptionPane.YES_NO_OPTION
+    );
+    
+    if (confirm == javax.swing.JOptionPane.YES_OPTION) {
+        this.dispose();
+        
+        javax.swing.JFrame frame = new javax.swing.JFrame("Connexion");
+        frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+        
+        javax.swing.JDesktopPane desktop = new javax.swing.JDesktopPane();
+        frame.setContentPane(desktop);
+        frame.setSize(800, 900);
+        frame.setLocationRelativeTo(null);
+        
+        logginPanel loginInternal = new logginPanel();
+        desktop.add(loginInternal);
+        loginInternal.setSize(800, 1500);
+        loginInternal.setVisible(true);
+        
+        frame.setVisible(true);
+    }
+    }//GEN-LAST:event_DéconnexionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,7 +364,9 @@ public class Mainfram extends javax.swing.JFrame {
                 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Déconnexion;
     private javax.swing.JMenuItem cutMenuItem;
+    private javax.swing.JMenu deconnexion;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem evenement;
@@ -218,6 +374,9 @@ public class Mainfram extends javax.swing.JFrame {
     private javax.swing.JMenuItem graphe;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuItem insription;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem participant;
     // End of variables declaration//GEN-END:variables

@@ -116,7 +116,9 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
         capacite.setRows(5);
         jScrollPane1.setViewportView(capacite);
 
-        ajouter.setBackground(new java.awt.Color(0, 153, 102));
+        ajouter.setBackground(new java.awt.Color(102, 0, 102));
+        ajouter.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        ajouter.setForeground(new java.awt.Color(255, 255, 255));
         ajouter.setText("Ajouter");
         ajouter.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,7 +126,9 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
             }
         });
 
-        modifier.setBackground(new java.awt.Color(255, 153, 0));
+        modifier.setBackground(new java.awt.Color(153, 0, 153));
+        modifier.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        modifier.setForeground(new java.awt.Color(255, 255, 255));
         modifier.setText("Modifier");
         modifier.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +136,9 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
             }
         });
 
-        supprimer.setBackground(new java.awt.Color(204, 51, 0));
+        supprimer.setBackground(new java.awt.Color(153, 0, 204));
+        supprimer.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        supprimer.setForeground(new java.awt.Color(255, 255, 255));
         supprimer.setText("supprimer");
         supprimer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,7 +166,7 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
                         .addComponent(modifier, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(supprimer, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 36, Short.MAX_VALUE))
+                        .addGap(0, 48, Short.MAX_VALUE))
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addComponent(lieu)
@@ -189,7 +195,7 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
                     .addComponent(supprimer)
                     .addComponent(modifier)
                     .addComponent(ajouter))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 645, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -215,14 +221,14 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 883, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -232,8 +238,7 @@ public class EvenementPanel extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

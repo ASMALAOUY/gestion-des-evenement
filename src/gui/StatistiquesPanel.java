@@ -59,7 +59,6 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
         jLabel2 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jButton1 = new javax.swing.JButton();
-        btnReset = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableauEvenements = new javax.swing.JTable();
@@ -81,6 +80,7 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
         jLabel1.setText("Filtrer par Lieu :");
 
         btnFiltrerLieu.setBackground(new java.awt.Color(0, 153, 204));
+        btnFiltrerLieu.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         btnFiltrerLieu.setForeground(new java.awt.Color(255, 255, 255));
         btnFiltrerLieu.setText("Filtrer");
         btnFiltrerLieu.addActionListener(new java.awt.event.ActionListener() {
@@ -93,21 +93,13 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
         jLabel2.setForeground(new java.awt.Color(153, 0, 204));
         jLabel2.setText("Filtrer par Date:");
 
-        jButton1.setBackground(new java.awt.Color(51, 0, 51));
+        jButton1.setBackground(new java.awt.Color(102, 0, 153));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Filtrer");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
-            }
-        });
-
-        btnReset.setBackground(new java.awt.Color(102, 0, 102));
-        btnReset.setForeground(new java.awt.Color(255, 255, 255));
-        btnReset.setText("Réinitialiser");
-        btnReset.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnResetActionPerformed(evt);
             }
         });
 
@@ -123,7 +115,6 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
                 .addContainerGap())
             .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 553, Short.MAX_VALUE)
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -139,8 +130,6 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
                 .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -166,7 +155,7 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 36, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -186,10 +175,6 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnFiltrerLieuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrerLieuActionPerformed
                                               
@@ -254,7 +239,6 @@ public class StatistiquesPanel extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFiltrerLieu;
-    private javax.swing.JButton btnReset;
     private javax.swing.JTextField filtreTexte;
     private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
